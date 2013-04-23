@@ -1,0 +1,15 @@
+Link to amazon hosted page:
+ec2-54-214-126-55.us-west-2.compute.amazonaws.com
+
+Link to Github repo:
+https://github.com/josephooi/191_fin
+
+Brief notes about the post-receive script:
+- runs when there is an update (push) to the git repo server-side
+- location of the git repo: git@ec2-54-214-126-55.us-west-2.compute.amazonaws.com:~/gitrepos/project.git
+- the script pulls the updates into ~/project-update
+- the script copies the server.html file from ~/project-update to ~/ (where the files are being served)
+
+Simple server accessible at: ec2-54-214-126-55.us-west-2.compute.amazonaws.com/server.html
+
+

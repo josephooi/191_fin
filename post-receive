@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Post-receive script is now running to clone the git updates onto git@<ec2>:~/project\n"
+
+# Navigate to the home directory of git
+cd /home/git/project-update
+
+unset GIT_DIR
+
+# Git pull (download updates)
+git pull ~/gitrepos/project.git
+
+# Copy the server.html file onto the home directory of git, where files are being served
+cp ~/project-update/server.html ~/server.html
